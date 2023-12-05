@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">         
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Update Data Promo</title>
+  <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="../aset/favicon.ico"> -->
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-bowl-hot'></i>
+      <span class="logo_name">Dashboard</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="{{url_for('dashboard')}}">
+          <i class='bx bxs-dashboard'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('dashboardUser')}}">
+          <i class='bx bxs-user'></i>
+          <span class="links_name">Tabel User</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('dashboardReservasi')}}">
+          <i class='bx bxs-receipt'></i>
+          <span class="links_name">Tabel Record Reservasi</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('dashboardMenu')}}">
+          <i class='bx bxs-food-menu' ></i>
+          <span class="links_name">Tabel Menu</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('dashboardPromo')}}" class="active">
+          <i class='bx bxs-discount'></i>
+          <span class="links_name">Tabel Promo</span>
+        </a>
+      </li>
+      <li>
+        <a href="{{url_for('dashboardMeja')}}">
+          <i class='bx bxs-chalkboard'></i>
+          <span class="links_name">Tabel Meja</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="{{url_for('index')}}">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Kembali</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Update Data</span>
+      </div>
+      <div class="profile-details">
+        <img src="../static/img/potrait.jpg" alt="">
+        <span class="admin_name">Admoon</span>
+      </div>
+    </nav>
+
+    <div class="home-content">
+     <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title mt-4 mb-4" style="text-align: center;">Update Data Promo</h5>
+          <hr>
+          {% for dataPromo in data %}
+          
+          <form action="/updatePromo/{{dataPromo['id_promo']}}" method="post">
+           <div class="form-group">
+            <label for="">Menu</label>
+            <select class="form-control col-md-2" name="promo" id="" type="text" disabled>
+              <option value="{{dataPromo['id_promo']}}">{{dataPromo['id_promo']}} - {{dataPromo['menu']}}</option>
+            </select>
+            <!-- <input type="text" name="" class="form-control" value="" placeholder="Masukan Menu" required/> -->
+          </div>
+          <div class="form-group">
+            <label for="">Harga Awal</label>
+            <input type="number" name="harga_awal" class="form-control" value="{{dataPromo['harga_awal']}}" placeholder="Masukan Harga Awal" disabled required/>
+          </div>
+          <div class="form-group">
+            <label for="">Harga Promo</label>
+            <input type="number" name="harga_akhir" class="form-control"  min="0" {{disabled}} required/>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-2">
+              <label for="">Tanggal</label>
+              <input type="date" name="tanggal" class="form-control"  placeholder="Masukan Tanggal" {{disabled}} required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="submit" name="submit" class="btn btn-primary mr-2" {{disabled}}>Submit</button>
+          </form>
+          {%endfor%}
+          <a href="{{url_for('dashboardPromo')}}" class="btn btn-secondary" role="button">Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

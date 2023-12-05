@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In ManganKuy!</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/css/sign.css" />
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="../aset/favicon.ico"> -->
+  <!-- Link -->
+  <link
+  href="https://fonts.googleapis.com/css2?family=Viga&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="container">
+    <form action="" class="login" method="post">
+      <a
+      href="../index.html"
+      class="login-text"
+      style="font-size: 2rem; font-weight: 800"
+      >ManganKuy!</a
+      >
+      <h3>Username</h3>
+      <div class="input-group">
+        <input
+        type="text"
+        placeholder="Masukan Username"
+        name="username"
+        required
+        />
+      </div>
+      <h3>Password</h3>
+      <div class="input-group">
+        <input
+        type="password"
+        placeholder="Masukan Password"
+        name="password"
+        required
+        />
+      </div>
+      <h3>Konfirmasi Password</h3>
+      <div class="input-group">
+        <input
+        type="password"
+        placeholder="Konfirmasi Password"
+        name="password2"
+        required
+        />
+      </div>
+      <b>{{msg}}</b>
+      <p class="register-text">
+        Sudah punya akun? <a href="{{url_for('login')}}">Sign In.</a>
+      </p>
+      <div class="input-group">
+        <button name="submit" class="btn">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

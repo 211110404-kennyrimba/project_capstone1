@@ -1,0 +1,1 @@
+BASE_PATH = "C:/Users/ASUS/Music/kampus1/capstone/UAS/static/img/"
