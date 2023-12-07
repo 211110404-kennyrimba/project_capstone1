@@ -16,7 +16,9 @@ from wtforms import StringField
 from flask_wtf.file import FileField, FileAllowed
 from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
-from filepath import BASE_PATH
+#from filepath import BASE_PATH
+
+BASE_PATH = os.path.abspath(os.path.dirname(__file__)) + "/"
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -28,7 +30,7 @@ def getMysqlConnection():
     return mysql.connector.connect(
         user="root", host=DB_HOST, port="3306", password="", database="pa_web"
     )
-
+print("DB HOST : ", DB_HOST)
 
 class MyForm(FlaskForm):
     file = FileField(

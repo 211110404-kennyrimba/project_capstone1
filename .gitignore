@@ -1,3 +1,4 @@
 ngrok.exe
 ngrok.yml
 .venv
+.env
