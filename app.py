@@ -22,10 +22,11 @@ app = Flask(__name__)
 app.secret_key = "super secret key"
 APIurl = "http://127.0.0.1:8000/api/"
 
+DB_HOST = os.getenv("DB_HOST", "localhost")
 
 def getMysqlConnection():
     return mysql.connector.connect(
-        user="root", host="localhost", port="3306", password="", database="pa_web"
+        user="root", host=DB_HOST, port="3306", password="", database="pa_web"
     )
 
 
