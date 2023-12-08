@@ -61,7 +61,7 @@ class Update(BaseModel):
 @app.get("/api/")
 def index():
     return {
-        "description": "Mie Ayam Bang Willi's API, created and developed by Kelompok 4"
+        "description": "API status 200"
     }
 
 # API RESERVASI
