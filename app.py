@@ -31,7 +31,7 @@ DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 
 def getMysqlConnection():
     return mysql.connector.connect(
-        user=DB_USER, host=DB_HOST, port="3306", password="", database="pa_web"
+        user=DB_USER, host=DB_HOST, port="3306", password=DB_PASSWORD, database="pa_web"
     )
 print("DB HOST : ", DB_HOST)
 print("API_URL : ", APIurl)
