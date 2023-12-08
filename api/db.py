@@ -3,6 +3,8 @@ import os
 DB_USER = os.getenv("DB_USER", "root")
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+APIurl = os.getenv("API_URL", "http://127.0.0.1:8000/api/")
+
 print("DB HOST : ", DB_HOST)
 print("API_URL : ", APIurl)
 print("DB USER : ", DB_USER)
