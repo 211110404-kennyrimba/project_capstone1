@@ -1,12 +1,18 @@
 import mysql.connector
 import os
-DB_HOST = os.getenv("DB_HOST", "serverless-1-instance-1.cbr7wdswraiy.ap-southeast-2.rds.amazonaws.com")
+DB_USER = os.getenv("DB_USER", "root")
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+print("DB HOST : ", DB_HOST)
+print("API_URL : ", APIurl)
+print("DB USER : ", DB_USER)
+print("DB PASSWORD : ", DB_PASSWORD)
+
 
 def getMysqlConnection():
     return mysql.connector.connect(
-        user="root", host=DB_HOST, port="3306", password="", database="pa_web"
+        user=DB_USER, host=DB_HOST, port="3306", password=DB_PASSWORD, database="pa_web"
     )
-
 
 def getData(sqlstr):
     db = getMysqlConnection()
