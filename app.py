@@ -130,6 +130,7 @@ def daftar_menu():
 
     r = requests.get(APIurl + "getDaftarMenu")
     data = r.json()["data_menu"]
+    print("DATA DAFTAR MENU : -----------------------------------------------------------")
     return render_template("daftar_menu.html", data=data, hidden_logout=hidden_logout, id = id_session)
 
 

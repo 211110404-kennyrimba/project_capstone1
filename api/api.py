@@ -485,6 +485,7 @@ def getDaftarMenu():
                 "path": i[3]
             }
         )
+    print("CONTENT API DAFTAR MENU : -----------------------------------------------------------")
     return content
 
 
