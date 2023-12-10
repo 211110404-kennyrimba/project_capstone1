@@ -9,9 +9,9 @@ body {
 
 /*Jumbotron*/
 .jumbotron {
-	background-image: url(../img/bg8.png);
+	background-image: url(../img/newwallpaper.png);
 	background-size: cover;
-	height: 350px;
+	height: 600px;
 	width: 100%;
 	color: white;
 }
@@ -25,8 +25,8 @@ body {
 }
 
 .jumbotron hr {
-	border-color: white;
-	width: 400px;
+	border-color: rgb(255, 0, 0);
+	width: 200px;
 	border-width: 3px;
 }
 /*Akhir Jumbotron*/
@@ -49,6 +49,40 @@ body {
 }
 /*Akhir Navbar*/
 
+.catalog-container {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between; /* Menyusun katalog dengan jarak yang sama */
+  }
+
+  /* Mengatur gaya katalog */
+  .catalog {
+	width: 23%; /* Menetapkan lebar katalog */
+	padding: 10px; /* Memberikan padding agar tampilan lebih rapi */
+	border: 1px solid #ccc; /* Memberikan border untuk efek visual */
+	box-sizing: border-box; /* Memastikan border dan padding termasuk dalam lebar dan tinggi total */
+  }
+  .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+  }
+
+  .center-container {
+	text-align: center;
+  }
+
+  .center-container button {
+	padding: 20px 20px;
+	background-color: #4CAF50;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+  }
 /*Footer*/
 .footer {
 	margin-top: 150px;
@@ -71,3 +105,4 @@ body {
 }
 
 /*Akhir Home*/
+
