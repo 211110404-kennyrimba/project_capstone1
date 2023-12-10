@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  <title>MIE AYAM BANG WILLI</title>
+  <title>MIE AYAM 2 KM</title>
   <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
 </head>
 <body>
@@ -26,7 +26,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg  bg-dark">
     <div class="container">
-      <a class="navbar-brand text-white" href="{{url_for('index')}}"><strong>MIE AYAM BANG WILLI</strong></a>
+      <a class="navbar-brand text-white" href="{{url_for('index')}}"><strong>SiCLouding</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,16 +40,7 @@
             <a class="nav-link mr-4" href="{{url_for('daftar_menu')}}">DAFTAR MENU</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mr-4" href="{{url_for('promo')}}" >PROMO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mr-4" href="/antrian/{{id_session}}" {{hidden_logout}}>RIWAYAT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mr-4" href="{{url_for('login')}}" {{hidden_login}}>LOGIN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mr-4" href="{{url_for('logout')}}" {{hidden_logout}}>LOGOUT</a>
+            <a class="nav-link mr-4" href="{{url_for('login')}}" {{hidden_login}}>DASHBBOARD</a>
           </li>
         </ul>
       </div>
@@ -60,32 +51,43 @@
   <!-- Menu -->    
   <div class="container">
     <div class="judul text-center mt-5">
-      <h3 class="font-weight-bold">MIE AYAM BANG WILLI</h3>
-      <h5>Jl.Cipinang Latihan, Cipinang Besar Utara, Jakarta Timur
-        <br><a href="https://goo.gl/maps/arcT28VoUW4TAfKU7"><i class='bx bx-map'></i>Buka Maps Disini</a>
-        <br>Buka Jam <strong>08:00 - 20:00</strong></h5>
+      <h3 class="font-weight-bold">Daftar Menu</h3>
+    </div>
+    <div class="catalog-container">
+      <!-- Katalog pertama -->
+      <div class="catalog">
+        <h3>Mie Ceker</h3>
+        <img src="../static/img/Menu1.png" class="card-img">
+        <p>22,000</p>
       </div>
-
-      <div class="row mb-5 mt-5 ">
-        <div class="col-md-6 d-flex justify-content-end">
-          <div class="card bg-dark text-white border-light">
-            <img src="../static/img/menu2.jpg" class="card-img" alt="Lihat Daftar Menu">
-            <div class="card-img-overlay mt-5 text-center">
-             <a href="{{url_for('daftar_menu')}}" class="btn btn-primary">LIHAT DAFTAR MENU</a>
-           </div>
-         </div>
-       </div>
-
-       <div class="col-md-6 d-flex justify-content-start">
-        <div class="card bg-dark text-white border-light">
-          <img src="../static/img/menu3.jpg" class="card-img" alt="Lihat Pesanan">
-          <div class="card-img-overlay mt-5 text-center">
-           <a href="{{url_for('promo')}}" class="btn btn-primary">LIHAT PROMO</a>
-         </div>
-       </div>
-     </div>
-   </div>
+  
+      <!-- Katalog kedua -->
+      <div class="catalog">
+        <h3>Mie Pangsit</h3>
+        <img src="../static/img/Menu2.png" class="card-img">
+        <p>20.000</p>
+      </div>
+  
+      <!-- Katalog ketiga -->
+      <div class="catalog">
+        <h3>Mie Pangsit Baso</h3>
+        <img src="../static/img/Menu3.png" class="card-img">
+        <p>25.000</p>
+      </div>
+  
+      <!-- Katalog keempat -->
+      <div class="catalog">
+        <h3>Mie Ayam</h3>
+        <img src="../static/img/Menu4.png" class="card-img">
+        <p>16.000</p>
+      </div>
+    </div>
  </div>
+
+<div class="center-container">
+  <a href="{{url_for('userReservasi')}}" class="btn btn-success mt-3">RESERVASI</a>
+  <!-- <button>Reservation</button> -->
+</div>
  <!-- Akhir Menu -->
 
  <!-- Awal Footer -->
@@ -94,7 +96,7 @@
   <div class="row footer-body">
     <div class="col-md-6">
       <div class="copyright">
-        <strong>Copyright</strong> <i class="far fa-copyright"></i> 2022 -  MIE AYAM BANG WILLI</p>
+        <strong>Copyright</strong> <i class="far fa-copyright"></i> 2023 -  SiCLouding</p>
       </div>
     </div>
 
