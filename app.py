@@ -26,6 +26,7 @@ BASE_PATH = os.path.abspath(os.path.dirname(__file__)) + "/"
 
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 app.secret_key = "super secret key"
 #APIurl = "http://127.0.0.1:8000/api/"
 APIurl = os.getenv("API_URL", "http://127.0.0.1:8000/api/")
