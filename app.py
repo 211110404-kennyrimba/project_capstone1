@@ -8,7 +8,7 @@ from flask import (
     url_for,
     jsonify,
 )
-
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 import mysql.connector, requests
 from flask_wtf import FlaskForm
@@ -19,9 +19,13 @@ from werkzeug.utils import secure_filename
 import os
 #from filepath import BASE_PATH
 
+
+
+
 BASE_PATH = os.path.abspath(os.path.dirname(__file__)) + "/"
 
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 app.secret_key = "super secret key"
 #APIurl = "http://127.0.0.1:8000/api/"
 APIurl = os.getenv("API_URL", "http://127.0.0.1:8000/api/")
@@ -848,3 +852,4 @@ def logout():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
+    
