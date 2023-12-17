@@ -3,9 +3,10 @@ from pydantic import BaseModel
 from api.db import *
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
-app = FastAPI()
 
 # Use TrustedHostMiddleware to handle proxy headers
+
+app = FastAPI(title="Mie Ayam bang Willi - API Services", version="1.0.0")
 app.add_middleware(
     TrustedHostMiddleware, 
     allowed_hosts=["siclouding.com"],  # Add your domain here
@@ -16,8 +17,6 @@ app.add_middleware(
         "X-Forwarded-Host": "*",
     },
 )
-app = FastAPI(title="Mie Ayam bang Willi - API Services", version="1.0.0")
-
 def convert_timedelta(waktu):
     detik = waktu.seconds
     jam = detik // 3600
