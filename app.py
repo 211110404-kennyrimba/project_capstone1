@@ -32,6 +32,8 @@ DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 SSL_CERTFILE = os.getenv("SSL_CERTFILE", "")
 SSL_KEYFILE = os.getenv("SSL_KEYFILE", "")
+DEBUG = os.getenv("DEBUG", "True")
+FLASK_HOST = os.getenv("FLASK_HOST", "127.0.0.1")
 
 def getMysqlConnection():
     return mysql.connector.connect(
@@ -851,5 +853,5 @@ def logout():
     )
 
 if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0', ssl_context=(SSL_CERTFILE, SSL_KEYFILE))
+    app.run(debug=DEBUG, host=FLASK_HOST, ssl_context=(SSL_CERTFILE, SSL_KEYFILE))
     
