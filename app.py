@@ -20,19 +20,17 @@ import os
 #from filepath import BASE_PATH
 
 
-
-
 BASE_PATH = os.path.abspath(os.path.dirname(__file__)) + "/"
 
 app = Flask(__name__)
-app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
-app.config['PREFERRED_URL_SCHEME'] = 'https'
 app.secret_key = "super secret key"
 #APIurl = "http://127.0.0.1:8000/api/"
 APIurl = os.getenv("API_URL", "http://127.0.0.1:8000/api/")
 DB_USER = os.getenv("DB_USER", "root")
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+SSL_CERTFILE = os.getenv("SSL_CERTFILE", "")
+SSL_KEYFILE = os.getenv("SSL_KEYFILE", "")
 
 def getMysqlConnection():
     return mysql.connector.connect(
@@ -852,5 +850,5 @@ def logout():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0', ssl_context=(SSL_CERTFILE, SSL_KEYFILE))
     

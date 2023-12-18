@@ -1,10 +1,20 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from api.db import *
-
-
+from dotenv import load_dotenv
+load_dotenv()
+SSL_CERTFILE = os.getenv("SSL_CERTFILE", "")
+SSL_KEYFILE = os.getenv("SSL_KEYFILE", "")
 
 app = FastAPI(title="Mie Ayam bang Willi - API Services", version="1.0.0")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        app,
+        host="127.0.0.1",
+        port=8000,
+    )
 
 def convert_timedelta(waktu):
     detik = waktu.seconds
