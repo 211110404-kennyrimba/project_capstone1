@@ -18,7 +18,8 @@ from wtforms.validators import DataRequired
 from werkzeug.utils import secure_filename
 import os
 #from filepath import BASE_PATH
-
+from dotenv import load_dotenv
+load_dotenv()
 
 BASE_PATH = os.path.abspath(os.path.dirname(__file__)) + "/"
 
