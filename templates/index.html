@@ -40,7 +40,13 @@
             <a class="nav-link mr-4" href="{{url_for('daftar_menu')}}">DAFTAR MENU</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mr-4" href="{{url_for('login')}}" {{hidden_login}}>DASHBBOARD</a>
+            <!-- <a class="nav-link mr-4" href="/antrian/{{id_session}}" {{hidden_logout}}>RIWAYAT</a> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mr-4" href="{{url_for('login')}}" {{hidden_login}}>LOGIN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mr-4" href="{{url_for('logout')}}" {{hidden_logout}}>LOGOUT</a>
           </li>
         </ul>
       </div>
