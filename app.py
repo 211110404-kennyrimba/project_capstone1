@@ -700,18 +700,18 @@ def userReservasi():
         file = request.files["files"]
 
         # Sanitize the file name
-        filename = secure_filename(file.filename)
+        #filename = secure_filename(file.filename)
 
         # Save the file to the filesystem
-        file.save(BASE_PATH + filename)
+        #file.save(BASE_PATH + filename)
 
-        filepath = path + filename
+        #filepath = path + filename
 
         separate_meja = meja.split(",")
         strmeja = separate_meja[0]
         keterangan_meja = separate_meja[1]
         id_user = session["id"]
-        sqlstr = f"INSERT INTO `reservasi` (`id_pemesanan`, `nama`, `email`, `telp`, `jum_tamu`, `tanggal`, `jam`, `tambahan`, `id_user`, `meja_no`, `ket_meja`, `status`, `identitas`) VALUES (NULL, '{nama}', '{email}', '{telepon}', '{jml_tamu}', '{tanggal}', '{jam}', '{layanan}', '{id_user}', '{strmeja}', '{keterangan_meja}', '{status}', '{filepath}')"
+        sqlstr = f"INSERT INTO `reservasi` (`id_pemesanan`, `nama`, `email`, `telp`, `jum_tamu`, `tanggal`, `jam`, `tambahan`, `id_user`, `meja_no`, `ket_meja`, `status`, `identitas`) VALUES (NULL, '{nama}', '{email}', '{telepon}', '{jml_tamu}', '{tanggal}', '{jam}', '{layanan}', '{id_user}', '{strmeja}', '{keterangan_meja}', '{status}')"
         cur.execute(sqlstr)
         db.commit()
 
