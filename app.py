@@ -700,12 +700,12 @@ def userReservasi():
         file = request.files["files"]
 
         # Sanitize the file name
-        filename = secure_filename(file.filename)
+        #filename = secure_filename(file.filename)
 
         # Save the file to the filesystem
-        file.save(BASE_PATH + filename)
+        #file.save(BASE_PATH + filename)
 
-        filepath = path + filename
+        #filepath = path + filename
 
         separate_meja = meja.split(",")
         strmeja = separate_meja[0]
