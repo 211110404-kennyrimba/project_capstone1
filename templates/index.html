@@ -40,7 +40,7 @@
             <a class="nav-link mr-4" href="{{url_for('daftar_menu')}}">DAFTAR MENU</a>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link mr-4" href="/antrian/{{id_session}}" {{hidden_logout}}>RIWAYAT</a> -->
+            <a class="nav-link mr-4" href="/antrian/{{id_session}}" {{hidden_logout}}>RIWAYAT</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mr-4" href="{{url_for('login')}}" {{hidden_login}}>LOGIN</a>
@@ -61,31 +61,18 @@
     </div>
     <div class="catalog-container">
       <!-- Katalog pertama -->
-      <div class="catalog">
-        <h3>Mie Ceker</h3>
-        <img src="../static/img/Menu1.png" class="card-img">
-        <p>22,000</p>
-      </div>
-  
-      <!-- Katalog kedua -->
-      <div class="catalog">
-        <h3>Mie Pangsit</h3>
-        <img src="../static/img/Menu2.png" class="card-img">
-        <p>20.000</p>
-      </div>
-  
-      <!-- Katalog ketiga -->
-      <div class="catalog">
-        <h3>Mie Pangsit Baso</h3>
-        <img src="../static/img/Menu3.png" class="card-img">
-        <p>25.000</p>
-      </div>
-  
-      <!-- Katalog keempat -->
-      <div class="catalog">
-        <h3>Mie Ayam</h3>
-        <img src="../static/img/Menu4.png" class="card-img">
-        <p>16.000</p>
+      <div class="row mt-3">
+        {% for item in data%}
+        <div class="col-md-3">
+          <div class="card border-dark">
+            <img src="{{item['path']}}" class="card-img-top" alt="gambar {{item['menu']}}">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">{{item['menu']}}</h5>
+              <label class="card-text harga">Rp. {{item['harga']}}0</label><br>
+            </div>
+          </div>
+        </div>
+        {%endfor%}
       </div>
     </div>
  </div>
