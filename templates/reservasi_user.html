@@ -9,34 +9,35 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
 </head>
 <body>
-
+	
 	<div class="wrapper">
-
-
+		
+		
 		<div class="container">
-			<div class="container-time">
+			<!-- <div class="container-time">
 				<h2 class="heading">Waktu Buka</h2>
 				<h3 class="heading-days">Senin-Jumat</h3>
 				<p>08.00 - 20.00</p>
-
+				
 				<h3 class="heading-days">Sabtu</h3>
 				<p>10.00 - 22.00</p>
-
+				
 				<h3 class="heading-days">Minggu</h3>
 				<p>Tutup</p>
 				<hr>
-
+				
 				<h4 class="heading-days">Google Maps </h4>
 				<a href="https://goo.gl/maps/XZjLr1HyZNFm3MAG9">MIE AYAM BANG WILLI</a>
 				<hr>
-
+				
 				<h4 class="heading-phone">Call Us: (+62)857-7739-9960</h4>
-			</div>
-
+			</div> -->
+			<br>
+			<br>
 			<div class="container-form">
 				<form action="/userReservasi" method="post" enctype="multipart/form-data">
-					<h2 class="heading heading-yellow">Reservation Online</h2>
-
+					<h2 class="heading heading-yellow">Reservasi Tempat</h2>
+					
 					<div class="form-field">
 						<p>Nama</p>
 						<input type="text" name="nama" placeholder="Nama Lengkap">
@@ -78,11 +79,11 @@
 						<label for="">Foto Menu</label>
 						<!-- Opsi File Picker 1 -->
 						<!-- <input type="file" class="form-control-file" id="exampleFormControlFile1"> -->
-			
+						
 						<!-- Opsi File Picker 2 -->
 						<div class="custom-file" enctype="multipart/form-data">
-						  <input type="file" name="files" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-						  <label class="custom-file-label col-sm-3" for="inputGroupFile03">Choose file</label>
+							<input type="file" name="files" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+							<label class="custom-file-label col-sm-3" for="inputGroupFile03">Choose file</label>
 						</div>
 					</div>
 					<div class="form-field">
@@ -90,7 +91,7 @@
 						<input type="Telepon" placeholder="(Optional)" name="layanan">
 					</div>
 					
-
+					
 					<!-- HIDDEN, USER OTOMATIS PENDING -->
 					<div class="form-group" hidden>            
 						<label for="">Status</label>
@@ -100,23 +101,24 @@
 						</select>
 						<!-- Opsi menggunakan radio button -->
 						<!-- <div class="form-check ml-3">
-						  <input class="form-check-input" type="radio" name="status" id="1" value="Pending">
-						  <label class="form-check-label" for="">
-							Pending
-						  </label>
+							<input class="form-check-input" type="radio" name="status" id="1" value="Pending">
+							<label class="form-check-label" for="">
+								Pending
+							</label>
 						</div>          
 						<div class="form-check ml-3">
-						  <input class="form-check-input" type="radio" name="status" id="2" value="Completed">
-						  <label class="form-check-label" for="">
-							Completed
-						</label> -->
+							<input class="form-check-input" type="radio" name="status" id="2" value="Completed">
+							<label class="form-check-label" for="">
+								Completed
+							</label> -->
+						</div>
+						<button class="btn submit">Booking Now!</button>
+						
 					</div>
-				</div>
-				<button class="btn submit">Booking Now!</button>
-			</form>
+				</form>
+			</div>
 		</div>
-	</div>
-</div>	
-
+	</div>	
+	
 </body>
 </html>
