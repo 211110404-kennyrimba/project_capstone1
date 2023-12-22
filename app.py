@@ -697,7 +697,7 @@ def userReservasi():
         meja = request.form["meja"]
         layanan = request.form["layanan"]
         status = request.form["status"]
-        file = request.files["files"]
+        #file = request.files["files"]
 
         # Sanitize the file name
         #filename = secure_filename(file.filename)
@@ -711,7 +711,8 @@ def userReservasi():
         strmeja = separate_meja[0]
         keterangan_meja = separate_meja[1]
         id_user = session["id"]
-        sqlstr = f"INSERT INTO `reservasi` (`id_pemesanan`, `nama`, `email`, `telp`, `jum_tamu`, `tanggal`, `jam`, `tambahan`, `id_user`, `meja_no`, `ket_meja`, `status`, `identitas`) VALUES (NULL, '{nama}', '{email}', '{telepon}', '{jml_tamu}', '{tanggal}', '{jam}', '{layanan}', '{id_user}', '{strmeja}', '{keterangan_meja}', '{status}')"
+        sqlstr = f"INSERT INTO `reservasi` (`id_pemesanan`, `nama`, `email`, `telp`, `jum_tamu`, `tanggal`, `jam`, `tambahan`, `id_user`, `meja_no`, `ket_meja`, `status`) VALUES (NULL, '{nama}', '{email}', '{telepon}', '{jml_tamu}', '{tanggal}', '{jam}', '{layanan}', '{id_user}', '{strmeja}', '{keterangan_meja}', '{status}')"
+        print("SQL Query:", sqlstr)
         cur.execute(sqlstr)
         db.commit()
 
