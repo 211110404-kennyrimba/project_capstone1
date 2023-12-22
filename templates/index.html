@@ -11,18 +11,18 @@
   <link rel="stylesheet" type="text/css" href="../static/css/index.css">
   <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+  
   <title>MIE AYAM 2 KM</title>
   <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
 </head>
 <body>
-
+  
   <!-- Jumbotron -->
   <div class="jumbotron jumbotron-fluid text-center">
     
   </div>
   <!-- Akhir Jumbotron -->
-
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg  bg-dark">
     <div class="container">
@@ -30,7 +30,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -53,15 +53,18 @@
     </div> 
   </nav>
   <!-- Akhir Navbar -->
-
+  
   <!-- Menu -->    
   <div class="container">
     <div class="judul text-center mt-5">
-      <h3 class="font-weight-bold">Daftar Menu</h3>
+      <a class="btn btn-info mt-3" href="{{url_for('daftar_menu')}}" >Daftar Menu</a>
+      <a href="{{url_for('userReservasi')}}" class="btn btn-success mt-3">Reservasi</a>
+      
+      <!-- <h3 class="font-weight-bold">Daftar Menu</h3> -->
     </div>
-    <div class="catalog-container">
+    <!-- <div class="catalog-container"> -->
       <!-- Katalog pertama -->
-      <div class="row mt-3">
+      <!-- <div class="row mt-3">
         {% for item in data%}
         <div class="col-md-3">
           <div class="card border-dark">
@@ -73,45 +76,44 @@
           </div>
         </div>
         {%endfor%}
+      </div> -->
+    <!-- </div> -->
+  </div>
+  
+  <!-- <div class="center-container">
+     <button>Reservation</button> -->
+  <!-- </div> -->
+  <!-- Akhir Menu -->
+  
+  <!-- Awal Footer -->
+  <hr class="footer">
+  <div class="container">
+    <div class="row footer-body">
+      <div class="col-md-6">
+        <div class="copyright">
+          <strong>Copyright</strong> <i class="far fa-copyright"></i> 2023 -  SiCLouding</p>
+        </div>
       </div>
-    </div>
- </div>
-
-<div class="center-container">
-  <a href="{{url_for('userReservasi')}}" class="btn btn-success mt-3">RESERVASI</a>
-  <!-- <button>Reservation</button> -->
-</div>
- <!-- Akhir Menu -->
-
- <!-- Awal Footer -->
- <hr class="footer">
- <div class="container">
-  <div class="row footer-body">
-    <div class="col-md-6">
-      <div class="copyright">
-        <strong>Copyright</strong> <i class="far fa-copyright"></i> 2023 -  SiCLouding</p>
-      </div>
-    </div>
-
-    <div class="col-md-6 d-flex justify-content-end">
-      <div class="icon-contact">
-        <label class="font-weight-bold">Follow Us </label>
-        <a href="#"><img src="../static/img/fb.png" class="mr-3 ml-4" data-toggle="tooltip" title="Facebook"></a>
-        <a href="#"><img src="../static/img/ig.png" class="mr-3" data-toggle="tooltip" title="Instagram"></a>
-        <a href="#"><img src="../static/img/twitter.png" class="" data-toggle="tooltip" title="Twitter"></a>
+      
+      <div class="col-md-6 d-flex justify-content-end">
+        <div class="icon-contact">
+          <label class="font-weight-bold">Follow Us </label>
+          <a href="#"><img src="../static/img/fb.png" class="mr-3 ml-4" data-toggle="tooltip" title="Facebook"></a>
+          <a href="#"><img src="../static/img/ig.png" class="mr-3" data-toggle="tooltip" title="Instagram"></a>
+          <a href="#"><img src="../static/img/twitter.png" class="" data-toggle="tooltip" title="Twitter"></a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Akhir Footer -->
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.js"></script>
+  <!-- Akhir Footer -->
+  
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
 </body>
 </html>

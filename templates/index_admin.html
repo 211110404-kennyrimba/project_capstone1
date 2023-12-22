@@ -59,42 +59,12 @@
   <!-- Menu -->    
   <div class="container">
     <div class="judul text-center mt-5">
-      <h3 class="font-weight-bold">Daftar Menu</h3>
+      <a href="{{url_for('dashboard')}}" class="btn btn-primary mt-3">Dashboard</a>
+      <a class="btn btn-warning mt-3" href="{{url_for('daftar_pesanan')}}" >Data Reservasi</a>
     </div>
-    <div class="catalog-container">
-      <!-- Katalog pertama -->
-      <div class="catalog">
-        <h3>Mie Ceker</h3>
-        <img src="../static/img/Menu1.png" class="card-img">
-        <p>22,000</p>
-      </div>
-      
-      <!-- Katalog kedua -->
-      <div class="catalog">
-        <h3>Mie Pangsit</h3>
-        <img src="../static/img/Menu2.png" class="card-img">
-        <p>20.000</p>
-      </div>
-      
-      <!-- Katalog ketiga -->
-      <div class="catalog">
-        <h3>Mie Pangsit Baso</h3>
-        <img src="../static/img/Menu3.png" class="card-img">
-        <p>25.000</p>
-      </div>
-      
-      <!-- Katalog keempat -->
-      <div class="catalog">
-        <h3>Mie Ayam</h3>
-        <img src="../static/img/Menu4.png" class="card-img">
-        <p>16.000</p>
-      </div>
-    </div>
+    
   </div>
-  <div class="center-container">
-    <a href="{{url_for('userReservasi')}}" class="btn btn-success mt-3">RESERVASI</a>
-    <!-- <button>Reservation</button> -->
-  </div>
+  
   <!-- Akhir Menu -->
   
   <!-- Awal Footer -->
