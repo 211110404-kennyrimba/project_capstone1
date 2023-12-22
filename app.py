@@ -722,7 +722,7 @@ def userReservasi():
 
         cur.close()
         db.close()
-        return redirect(url_for("promo"))
+        return redirect(url_for(f"antrian/{id_user}"))
     else:
         cur.close()
         db.close()
